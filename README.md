@@ -1,45 +1,57 @@
 # ✈️ Flight Fare Prediction using Machine Learning
 
+> An end-to-end Machine Learning project that predicts flight ticket prices using historical flight booking data. The project covers data preprocessing, feature engineering, exploratory data analysis (EDA), model building, hyperparameter tuning, evaluation, and model deployment readiness.
+
+---
+
 ## Project Overview
 
-This project focuses on predicting flight ticket prices using Machine Learning techniques.
+Flight ticket prices vary significantly depending on several factors such as airline, route, departure time, duration, and number of stops. This project builds a Machine Learning regression model capable of predicting flight fares accurately using historical flight data.
 
-The objective is to build a regression model that can estimate flight fares based on various factors such as Airline, Source, Destination, Duration, Journey details, and Number of Stops.
+The complete workflow includes:
+
+- Data Cleaning
+- Feature Engineering
+- Exploratory Data Analysis (EDA)
+- Data Preprocessing
+- Model Building
+- Hyperparameter Tuning
+- Model Evaluation
+- Model Saving
 
 ---
 
-# Business Problem
+## Business Problem
 
-Flight ticket prices depend on multiple factors and change frequently.
-
-This project helps in understanding the key factors affecting flight prices and predicts the expected fare using historical flight data.
+Airline ticket prices change dynamically based on multiple operational factors. Predicting airfare helps travelers make informed decisions and enables travel platforms to provide better pricing insights.
 
 ---
 
-# Dataset
+## Dataset Information
 
-The dataset contains flight booking information with features:
+The dataset contains the following features:
 
 - Airline
+- Date of Journey
 - Source
 - Destination
 - Route
-- Total Stops
-- Journey Date
 - Departure Time
 - Arrival Time
 - Duration
+- Total Stops
+- Additional Information
 - Price (Target Variable)
 
 ---
 
-# Technologies Used
+## Technology Stack
 
-## Programming Language
+### Programming Language
 
 - Python
 
-## Libraries
+### Libraries
 
 - Pandas
 - NumPy
@@ -47,132 +59,212 @@ The dataset contains flight booking information with features:
 - Seaborn
 - Scikit-learn
 
-## Machine Learning Algorithm
+### Machine Learning
 
 - Random Forest Regressor
 
-## Hyperparameter Optimization
+### Hyperparameter Tuning
 
 - RandomizedSearchCV
 
 ---
 
-# Project Workflow
+## Project Workflow
 
-## 1. Data Loading
+### Data Collection
 
-Loaded training and testing datasets and performed initial data inspection.
+Loaded training and testing datasets from Excel files.
 
-## 2. Data Cleaning
-
-Performed:
+### Data Cleaning
 
 - Missing value handling
-- Data type conversion
-- Removal of unnecessary columns
+- Removed unnecessary columns
+- Corrected data types
 
-## 3. Feature Engineering
+### Feature Engineering
 
-Created new features from existing data:
+Created new features including:
 
 - Journey Day
 - Journey Month
 - Departure Hour
-- Departure Minutes
+- Departure Minute
 - Arrival Hour
-- Arrival Minutes
+- Arrival Minute
 - Duration Hours
 - Duration Minutes
 
-## 4. Exploratory Data Analysis (EDA)
+### Exploratory Data Analysis
 
-Performed analysis to understand:
+Performed detailed analysis to understand:
 
-- Flight fare distribution
-- Airline-wise pricing
-- Feature relationships
-- Important factors affecting flight prices
+- Fare Distribution
+- Airline-wise Pricing
+- Correlation Between Features
+- Feature Importance
 
-## 5. Data Preprocessing
-
-Handled categorical variables using:
+### Data Preprocessing
 
 - One Hot Encoding
 - Label Encoding
 
-## 6. Model Building
+### Model Development
 
-Implemented:
+Implemented Random Forest Regression for fare prediction.
 
-**Random Forest Regression**
+### Hyperparameter Tuning
 
-to predict flight ticket prices.
-
-## 7. Hyperparameter Tuning
-
-Used:
-
-**RandomizedSearchCV**
-
-to improve model performance and select the best parameters.
+Optimized model performance using RandomizedSearchCV.
 
 ---
 
-# Exploratory Data Analysis (EDA)
+# Exploratory Data Analysis
 
 ## Flight Fare Distribution
 
-Analyzed the distribution of flight ticket prices.
+Understanding the distribution of ticket prices.
 
 ![Flight Fare Distribution](Images/fare_distribution.png)
-
 
 ---
 
 ## Airline Wise Fare Analysis
 
-Compared average flight prices across different airlines.
+Comparison of average fares across different airlines.
 
-![Airline Analysis](Images/airline_price_analysis.png)
-
+![Airline Wise Fare Analysis](Images/airline_price_analysis.png)
 
 ---
 
-## Feature Correlation Heatmap
+## Average Airline Fare Comparison
 
-Performed correlation analysis to identify relationships between features.
+Visualization of average ticket prices offered by different airlines.
+
+![Average Airline Fare Comparison](Images/airline_comparison.png)
+
+---
+
+## Correlation Heatmap
+
+Feature correlation analysis.
 
 ![Correlation Heatmap](Images/correlation_heatmap.png)
-
 
 ---
 
 # Model Performance
 
-The Random Forest Regression model was evaluated using:
+The model was evaluated using standard regression metrics.
+
+### Evaluation Metrics
 
 - Mean Absolute Error (MAE)
 - Mean Squared Error (MSE)
 - Root Mean Squared Error (RMSE)
-- R2 Score
-
-
-## Actual vs Predicted Flight Fare
-
-Comparison between actual flight prices and predicted prices.
-
-![Actual vs Predicted](Images/actual_vs_predicted.png)
-
+- R² Score
 
 ---
 
-# Feature Importance
+## Actual vs Predicted Flight Fare
 
-Identified the most important features influencing flight fare prediction using Random Forest feature importance.
+Comparison between actual and predicted flight prices.
+
+![Actual vs Predicted](Images/actual_vs_predicted.png)
+
+---
+
+## Feature Importance
+
+Top features contributing to flight fare prediction.
 
 ![Feature Importance](Images/feature_importance.png)
-
 
 ---
 
 # Project Structure
+
+```
+Flight-Fare-Prediction-ML
+│
+├── Data
+│   ├── Data_Train.xlsx
+│   └── Test_set.xlsx
+│
+├── Images
+│   ├── fare_distribution.png
+│   ├── airline_price_analysis.png
+│   ├── airline_comparison.png
+│   ├── correlation_heatmap.png
+│   ├── actual_vs_predicted.png
+│   └── feature_importance.png
+│
+├── Flight_Fare_Prediction.ipynb
+├── Flight_Fare_Prediction_Model.pkl
+├── requirements.txt
+└── README.md
+```
+
+---
+
+# Project Highlights
+
+- End-to-End Machine Learning Project
+- Complete Data Cleaning Pipeline
+- Feature Engineering
+- Exploratory Data Analysis
+- Random Forest Regression
+- Hyperparameter Optimization
+- Model Evaluation
+- Feature Importance Analysis
+- Production Ready Project Structure
+
+---
+
+# Future Enhancements
+
+- Streamlit Web Application
+- Real-Time Flight Price Prediction
+- API Integration
+- XGBoost & LightGBM Comparison
+- Docker Deployment
+- Cloud Deployment (AWS / Azure)
+
+---
+
+# Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/yourusername/Flight-Fare-Prediction-ML.git
+```
+
+Go to project folder
+
+```bash
+cd Flight-Fare-Prediction-ML
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the notebook
+
+```bash
+jupyter notebook
+```
+
+---
+
+# Author
+
+## Chirag Kapoor
+
+**Data Analyst | Python | SQL | Power BI | Machine Learning**
+
+---
+
+⭐ If you found this project useful, consider giving it a Star.
