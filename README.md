@@ -2,21 +2,23 @@
 
 ## Project Overview
 
-This project predicts flight ticket prices using Machine Learning techniques.
+This project focuses on predicting flight ticket prices using Machine Learning techniques.
 
-The objective is to build a regression model that can estimate flight fares based on different features like Airline, Source, Destination, Duration, Stops, and Journey details.
-
-## Business Problem
-
-Flight prices vary depending on multiple factors such as airline, route, duration, and number of stops.
-
-This project helps estimate flight prices using historical flight booking data.
+The objective is to build a regression model that can estimate flight fares based on various factors such as Airline, Source, Destination, Duration, Journey details, and Number of Stops.
 
 ---
 
-## Dataset
+# Business Problem
 
-Dataset contains flight details including:
+Flight ticket prices depend on multiple factors and change frequently.
+
+This project helps in understanding the key factors affecting flight prices and predicts the expected fare using historical flight data.
+
+---
+
+# Dataset
+
+The dataset contains flight booking information with features:
 
 - Airline
 - Source
@@ -31,12 +33,13 @@ Dataset contains flight details including:
 
 ---
 
-## Technologies Used
+# Technologies Used
 
-### Programming Language
+## Programming Language
+
 - Python
 
-### Libraries
+## Libraries
 
 - Pandas
 - NumPy
@@ -44,88 +47,132 @@ Dataset contains flight details including:
 - Seaborn
 - Scikit-learn
 
-### Machine Learning Model
+## Machine Learning Algorithm
 
 - Random Forest Regressor
 
-### Hyperparameter Optimization
+## Hyperparameter Optimization
 
 - RandomizedSearchCV
 
 ---
 
-## Project Workflow
+# Project Workflow
 
-### 1. Data Loading
+## 1. Data Loading
 
-Loaded training and testing datasets.
+Loaded training and testing datasets and performed initial data inspection.
 
-### 2. Data Cleaning
+## 2. Data Cleaning
 
-- Handled missing values
-- Removed unnecessary columns
-- Converted date and time features
+Performed:
 
-### 3. Feature Engineering
+- Missing value handling
+- Data type conversion
+- Removal of unnecessary columns
 
-Created new features:
+## 3. Feature Engineering
+
+Created new features from existing data:
 
 - Journey Day
 - Journey Month
 - Departure Hour
+- Departure Minutes
 - Arrival Hour
+- Arrival Minutes
 - Duration Hours
 - Duration Minutes
 
-### 4. Exploratory Data Analysis
+## 4. Exploratory Data Analysis (EDA)
 
-Performed analysis on:
+Performed analysis to understand:
 
-- Flight Fare Distribution
-- Airline-wise Fare Analysis
-- Source and Destination Analysis
-- Feature Correlation
+- Flight fare distribution
+- Airline-wise pricing
+- Feature relationships
+- Important factors affecting flight prices
 
-### 5. Data Preprocessing
+## 5. Data Preprocessing
 
 Handled categorical variables using:
 
 - One Hot Encoding
 - Label Encoding
 
-### 6. Machine Learning Model
+## 6. Model Building
 
 Implemented:
 
-Random Forest Regression
+**Random Forest Regression**
 
-### 7. Hyperparameter Tuning
+to predict flight ticket prices.
+
+## 7. Hyperparameter Tuning
 
 Used:
 
-RandomizedSearchCV
+**RandomizedSearchCV**
 
-to improve model performance.
+to improve model performance and select the best parameters.
 
 ---
 
-## Model Evaluation Metrics
+# Exploratory Data Analysis (EDA)
 
-Model performance evaluated using:
+## Flight Fare Distribution
 
-- MAE
-- MSE
-- RMSE
+Analyzed the distribution of flight ticket prices.
+
+![Flight Fare Distribution](Images/fare_distribution.png)
+
+
+---
+
+## Airline Wise Fare Analysis
+
+Compared average flight prices across different airlines.
+
+![Airline Analysis](Images/airline_price_analysis.png)
+
+
+---
+
+## Feature Correlation Heatmap
+
+Performed correlation analysis to identify relationships between features.
+
+![Correlation Heatmap](Images/correlation_heatmap.png)
+
+
+---
+
+# Model Performance
+
+The Random Forest Regression model was evaluated using:
+
+- Mean Absolute Error (MAE)
+- Mean Squared Error (MSE)
+- Root Mean Squared Error (RMSE)
 - R2 Score
 
+
+## Actual vs Predicted Flight Fare
+
+Comparison between actual flight prices and predicted prices.
+
+![Actual vs Predicted](Images/actual_vs_predicted.png)
+
+
 ---
 
-## Results
+# Feature Importance
 
-The Random Forest model successfully predicts flight prices based on historical flight data.
+Identified the most important features influencing flight fare prediction using Random Forest feature importance.
 
-Feature importance analysis identifies major factors affecting flight fares.
+![Feature Importance](Images/feature_importance.png)
+
 
 ---
 
-## Project Files
+# Project Structure
